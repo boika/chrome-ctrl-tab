@@ -6,7 +6,7 @@ There is a tricky way to achieve it in Windows using [Quick Tabs](https://chrome
 
 **1.** Install [Quick Tabs](https://chrome.google.com/webstore/detail/quick-tabs/jnjfeinjfmenlddahdjdmgpbokiacbbb) extension for chrome browser and enable it. You can also find its source code on [github](https://github.com/babyman/quick-tabs-chrome-extension).
 
-**2.** Configure Quick Tabs extension from its options page the next way (chrome-extension://jnjfeinjfmenlddahdjdmgpbokiacbbb/options.html):
+**2.** Configure Quick Tabs from its options page (chrome-extension://jnjfeinjfmenlddahdjdmgpbokiacbbb/options.html):
 
 - check all display options except badge tab count
     
@@ -18,7 +18,7 @@ There is a tricky way to achieve it in Windows using [Quick Tabs](https://chrome
                     
 - finally apply changes
 
-**3.** Configure chrome keyboard shortcuts for the extension (chrome://extensions/shortcuts). Chrome does not allow to set `Ctrl+Tab` as a hotkey, so we set `Ctrl+Shift+S` for activating teh extension. Also `Ctrl+↓` for previous tab and `Ctrl+↑` for the next one:
+**3.** Configure chrome keyboard shortcuts for the extension (chrome://extensions/shortcuts). Chrome does not allow to set `Ctrl+Tab` as a hotkey, so we set `Ctrl+Shift+S` for activating the extension. Also `Ctrl+↓` for previous tab and `Ctrl+↑` for the next one:
 
 ![Popup Screenshot](images/keyboard-shortcuts.jpg?raw=true)
  
