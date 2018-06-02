@@ -1,0 +1,74 @@
+body {
+    width: 420px;
+    user-select: none;
+    background-color: #fff;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.tools, #tools,
+.qs_wrapper, #searchbox,
+div.open:hover div.close,
+div.withfocus.open div.close {
+    display: none;
+}
+
+
+.item {
+    padding: 3px 0;
+    cursor: default;
+    transition: all .1s linear;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+div.title {
+    color: #000;
+    background-color: transparent;
+}
+
+div.url {
+    color: #c0c0c0;
+    background-color: transparent;
+}
+
+div.tabimage img {
+    padding: 0;
+    margin: 7px 10px 0 10px;
+    background-color: transparent;
+}
+
+
+.withfocus {
+    background-color: #e0e0e0;
+}
+
+.withfocus div.title {
+    color: #000;
+    background-color: transparent;
+}
+
+.withfocus div.url {
+    color: #a0a0a0;
+    background-color: transparent;
+}
+
+
+.item:hover {
+    background-color: #f0f0f0;
+}
+
+.item:hover div.title {
+    color: #000;
+    background-color: transparent;
+}
+
+.item:hover div.url {
+    color: #c0c0c0;
+    background-color: transparent;
+}
+
+
+.piu-piu-piu { }
