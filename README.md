@@ -1,7 +1,8 @@
 ## Chrome Ctrl+Tab tabs switching for Windows
 
-Unfortunately, there is no easy way to switch between chrome browser tabs in the order they were visited before, also using handy **`Ctrl+Tab`** hotkey. Also, showing the list of all opened tabs in the popup window with ability to navigate them using arrows. Just like we can do that with opened windows in the operation system.
-There is a tricky way to do it in Windows using [Quick Tabs](https://chrome.google.com/webstore/detail/quick-tabs/jnjfeinjfmenlddahdjdmgpbokiacbbb) extension and [AutoHotkey](https://autohotkey.com/) automation tool:
+Unfortunately, there is no easy way to switch between chrome browser tabs in the order they were visited before, also using handy **`Ctrl+Tab`** hotkey. Also, showing the list of all opened tabs in the popup window with ability to navigate them using arrows. Just like we can do that with opened windows in the operation system using `Alt+Tab`.
+
+There is a tricky way to achieve it in Windows using [Quick Tabs](https://chrome.google.com/webstore/detail/quick-tabs/jnjfeinjfmenlddahdjdmgpbokiacbbb) extension and [AutoHotkey](https://autohotkey.com/) automation tool:
 
 **1.** Install [Quick Tabs](https://chrome.google.com/webstore/detail/quick-tabs/jnjfeinjfmenlddahdjdmgpbokiacbbb) extension for chrome browser and enable it. You can also find its source code on [github](https://github.com/babyman/quick-tabs-chrome-extension).
 
