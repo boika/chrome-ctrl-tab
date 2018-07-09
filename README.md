@@ -30,10 +30,10 @@ It is required to intercept <kbd>Ctrl</kbd>+<kbd>Tab</kbd> hotkey for chrome win
 
 -----
 
-As a result you will see something like that when press <kbd>Ctrl</kbd>+<kbd>Tab</kbd> in active chrome window:
+As a result you will see something like that, when press <kbd>Ctrl</kbd>+<kbd>Tab</kbd> in active chrome window:
 
 ![Popup Screenshot](images/example.jpg?raw=true)
 
 Arrows navigation, <kbd>Esc</kbd>, both <kbd>Ctrl</kbd>+<kbd>Tab</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> are working the way you expected.
 
-If you don't want always start AutoHotkey manually, you can create shortcut with for `...\AutoHotkey[A32|U32|U64].exe chrome-ctrl+tab.ahk` target, add it to startup system folder, forget about it and enjoy.
+If you don't want always start AutoHotkey manually, you can create shortcut for `...\AutoHotkey[A32|U32|U64].exe chrome-ctrl+tab.ahk` target, add it to startup system folder, forget about it and enjoy.
