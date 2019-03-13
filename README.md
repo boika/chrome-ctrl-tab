@@ -8,21 +8,17 @@ There is a tricky way to achieve it in Windows using [Quick Tabs](https://chrome
 
 **2.** Configure Quick Tabs from its options page (chrome-extension://jnjfeinjfmenlddahdjdmgpbokiacbbb/options.html):
 
-- check all display options except badge tab count
-    
-![Popup Screenshot](images/quick-tabs-display-options.jpg?raw=true)
-                    
 - set custom CSS from [style.css](style.css)
-    
-![Popup Screenshot](images/quick-tabs-custom-css.jpg?raw=true)    
-                    
-- finally apply changes
+
+![Popup Screenshot](images/quick-tabs-custom-css.jpg?raw=true)
+
+- apply changes
 
 **3.** Configure chrome keyboard shortcuts for the extension (chrome://extensions/shortcuts). Chrome does not allow to set <kbd>Ctrl</kbd>+<kbd>Tab</kbd> as a hotkey, so we set <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> for activating the extension. Also <kbd>Ctrl</kbd>+<kbd>↓</kbd> for previous tab and <kbd>Ctrl</kbd>+<kbd>↑</kbd> for the next one:
 
 ![Popup Screenshot](images/keyboard-shortcuts.jpg?raw=true)
- 
- **4.** Install [AutoHotkey](https://autohotkey.com/download/) tool, if you don't have it installed, and run the script [chrome-ctrl+tab.ahk](chrome-ctrl+tab.ahk). Just start the program with path to the script:
+
+**4.** Install [AutoHotkey](https://autohotkey.com/download/) tool, if you don't have it installed, and run the script [chrome-ctrl+tab.ahk](chrome-ctrl+tab.ahk). Just start the program with path to the script:
 
 `...\AutoHotkey[A32|U32|U64].exe chrome-ctrl+tab.ahk`
 

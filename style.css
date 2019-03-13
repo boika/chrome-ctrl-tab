@@ -5,8 +5,8 @@ body {
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.tools, #tools,
-.qs_wrapper, #searchbox,
+.tools, #tools, .qs_wrapper,
+#searchbox, div.hideicon,
 div.open:hover div.close,
 div.withfocus.open div.close {
     display: none;
@@ -14,23 +14,21 @@ div.withfocus.open div.close {
 
 
 .item {
-    padding: 3px 0;
+    padding: 1px 0;
     cursor: default;
     transition: all .1s linear;
-    border-bottom: 1px solid #f2f2f2;
-}
-
-.item:last-child {
     border-bottom: none;
 }
 
 div.title {
     color: #000;
+    margin: 0 20px 0 10px;
     background-color: transparent;
 }
 
 div.url {
-    color: #c0c0c0;
+    color: #a0a0a0;
+    margin: 0 18px 0 10px;
     background-color: transparent;
 }
 
@@ -38,6 +36,21 @@ div.tabimage img {
     padding: 0;
     margin: 7px 10px 0 10px;
     background-color: transparent;
+}
+
+
+.item.nourl {
+    padding: 0;
+    height: 24px;
+}
+
+.item.nourl div.title {
+    padding-top: 0;
+    line-height: 24px;
+}
+
+.item.nourl div.tabimage img {
+    margin-top: 4px;
 }
 
 
@@ -66,6 +79,6 @@ div.tabimage img {
 }
 
 .item:hover div.url {
-    color: #c0c0c0;
+    color: #a0a0a0;
     background-color: transparent;
 }
