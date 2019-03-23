@@ -6,10 +6,8 @@ body {
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.tools, #tools, .qs_wrapper,
-#searchbox, div.hideicon,
-div.separator.big span,
-div.withfocus.open div.close {
+.tools, #tools, .qs_wrapper, #searchbox, div.hideicon,
+div.separator.big span, div.withfocus.open div.close {
     display: none;
 }
 
