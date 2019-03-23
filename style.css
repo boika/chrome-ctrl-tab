@@ -1,5 +1,6 @@
 body {
     width: 420px;
+    margin: 1px 0;
     user-select: none;
     background-color: #fff;
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
@@ -7,6 +8,7 @@ body {
 
 .tools, #tools, .qs_wrapper,
 #searchbox, div.hideicon,
+div.separator.big span,
 div.open:hover div.close,
 div.withfocus.open div.close {
     display: none;
@@ -80,5 +82,31 @@ div.tabimage img {
 
 .item:hover div.url {
     color: #a0a0a0;
+    background-color: transparent;
+}
+
+
+div.separator.big {
+    height: 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: none;
+    padding: 0;
+    margin: 4px 0;
+}
+
+.item.closed div.url {
+    opacity: 0.8;
+}
+
+.item.closed div.title {
+    color: gray;
+}
+
+.item.closed div.tabimage {
+    opacity: 0.5;
+}
+
+.item.closed.withfocus div.title, div.item.closed:hover div.title {
+    color: gray;
     background-color: transparent;
 }
