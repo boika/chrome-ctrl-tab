@@ -17,9 +17,6 @@ SetWinDelay, 0          ; Changed to 0 upon recommendation of documentation
 
 WindowTitle               := "Google Chrome"
 DeveloperToolsWindowTitle := "Developer Tools"
-TicksToOpenPopup          := 300
-OpenedTickCount           := 0
-NeedToMovePrev            := false
 
 
 HasPopupWindowSize()
@@ -35,12 +32,9 @@ HasPopupWindowSize()
 ; Ctrl+Tab
 ^Tab::
 {
-    NeedToMovePrev := false
-
     IfWinActive % WindowTitle
     {
-        Send ^+{s}
-        OpenedTickCount := A_TickCount
+        Send ^+{a}
     }
     else
     {
@@ -56,13 +50,10 @@ HasPopupWindowSize()
 {
     IfWinActive % WindowTitle
     {
-        Send ^+{s}
-        NeedToMovePrev := true
-        OpenedTickCount := A_TickCount
+        Send ^+{a}
     }
     else
     {
-        NeedToMovePrev := false
         Send ^{Up}
     }
 
@@ -73,24 +64,11 @@ HasPopupWindowSize()
 ; Ctrl keyup
 ~Ctrl Up::
 {
-    TicksToSleep := TicksToOpenPopup + OpenedTickCount - A_TickCount
-
-    if (TicksToSleep > 0)
-    {
-        Sleep TicksToSleep
-    }
-
     if WinActive("ahk_class Chrome_WidgetWin_1") and !WinActive(WindowTitle) and !WinActive(DeveloperToolsWindowTitle) and HasPopupWindowSize()
     {
-        if NeedToMovePrev
-        {
-            Send ^{Up}
-            Sleep 50
-        }
-
         Send {Enter}
     }
-    
+
     return
 }
 
@@ -104,7 +82,6 @@ HasPopupWindowSize()
 ^+Right::
 ^+Down::
 {
-    NeedToMovePrev := false
     Send ^{Down}
     return
 }
@@ -115,7 +92,6 @@ HasPopupWindowSize()
 ^+Left::
 ^+Up::
 {
-    NeedToMovePrev := false
     Send ^{Up}
     return
 }
