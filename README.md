@@ -6,6 +6,6 @@ It can be achieved in Windows using [AutoHotkey](https://autohotkey.com/) automa
 
 `.\AutoHotkey[32|64].exe chrome-ctrl+tab.ahk`
 
-It intercepts <kbd>Ctrl</kbd>+<kbd>Tab</kbd> hotkey for chrome window and send <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd> instead. Also it handles some keyboard arrows navigation.
+<kbd>Ctrl</kbd>+<kbd>Tab</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>, arrows navigation and <kbd>Esc</kbd> will work the way you expected.
 
-Arrows navigation, <kbd>Esc</kbd>, both <kbd>Ctrl</kbd>+<kbd>Tab</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> are working the way you expected. Instead of starting AutoHotkey manually, create shortcut for `.\AutoHotkey[32|64].exe chrome-ctrl+tab.ahk` target and add it to startup system folder.
+Instead of starting AutoHotkey manually, create shortcut for `.\AutoHotkey[32|64].exe chrome-ctrl+tab.ahk` target and add it to startup system folder.
