@@ -50,7 +50,7 @@ DeveloperToolsWindowTitle := "Developer Tools"
 ; Ctrl keyup
 ~Ctrl Up::
 {
-    if WinActive("ahk_class Chrome_WidgetWin_1") and WinActive("")
+    if WinActive("ahk_class Chrome_WidgetWin_1") and !WinActive(WindowTitle) and !WinActive(DeveloperToolsWindowTitle)
     {
         Send "{Enter}"
     }
@@ -61,7 +61,7 @@ DeveloperToolsWindowTitle := "Developer Tools"
 #HotIf
 
 
-#HotIf WinActive("ahk_exe Chrome.exe") and WinActive("ahk_class Chrome_WidgetWin_1") and WinActive("")
+#HotIf WinActive("ahk_exe Chrome.exe") WinActive("ahk_class Chrome_WidgetWin_1") and !WinActive(WindowTitle) and !WinActive(DeveloperToolsWindowTitle)
 
 ; Ctrl+Right, Ctrl+Shift+Right, Ctrl+Shift+Down
 ^Right::
