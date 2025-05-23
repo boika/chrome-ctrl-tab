@@ -1,4 +1,4 @@
-﻿ListLines False         ; Omits subsequently-executed lines from the history
+ListLines False         ; Omits subsequently-executed lines from the history
 KeyHistory 0            ; Disable key history
 SendMode "Input"        ; Recommended for new scripts due to its superior speed and reliability
 SetTitleMatchMode 2
@@ -13,13 +13,6 @@ SetWinDelay 0           ; Changed to 0 upon recommendation of documentation
 
 WindowTitle               := "Google Chrome"
 DeveloperToolsWindowTitle := "Developer Tools"
-
-
-HasPopupWindowSize()
-{
-    WinGetPos , , &Width, , "A"
-    return Width >= 330 and Width <= 340
-}
 
 
 #HotIf WinActive("ahk_exe Chrome.exe")
@@ -57,7 +50,7 @@ HasPopupWindowSize()
 ; Ctrl keyup
 ~Ctrl Up::
 {
-    if WinActive("ahk_class Chrome_WidgetWin_1") and !WinActive(WindowTitle) and !WinActive(DeveloperToolsWindowTitle) and HasPopupWindowSize()
+    if WinActive("ahk_class Chrome_WidgetWin_1") and WinActive("")
     {
         Send "{Enter}"
     }
@@ -68,7 +61,7 @@ HasPopupWindowSize()
 #HotIf
 
 
-#HotIf WinActive("ahk_exe Chrome.exe") and WinActive("ahk_class Chrome_WidgetWin_1") and !WinActive(WindowTitle) and !WinActive(DeveloperToolsWindowTitle) and HasPopupWindowSize()
+#HotIf WinActive("ahk_exe Chrome.exe") and WinActive("ahk_class Chrome_WidgetWin_1") and WinActive("")
 
 ; Ctrl+Right, Ctrl+Shift+Right, Ctrl+Shift+Down
 ^Right::
