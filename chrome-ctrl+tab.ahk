@@ -11,16 +11,12 @@ SetKeyDelay -1, -1      ; No delay at all will occur after each keystroke sent b
 SetWinDelay 0           ; Changed to 0 upon recommendation of documentation
 
 
-WindowTitle               := "Google Chrome"
-DeveloperToolsWindowTitle := "Developer Tools"
-
-
 #HotIf WinActive("ahk_exe Chrome.exe")
 
 ; Ctrl+Tab
 ^Tab::
 {
-    if WinActive(WindowTitle)
+    if WinGetTitle("A") != ""
     {
         Send "^+{a}"
     }
@@ -35,7 +31,7 @@ DeveloperToolsWindowTitle := "Developer Tools"
 ; Ctrl+Shift+Tab
 ^+Tab::
 {
-    if WinActive(WindowTitle)
+    if WinGetTitle("A") != ""
     {
         Send "^+{a}"
     }
@@ -50,7 +46,7 @@ DeveloperToolsWindowTitle := "Developer Tools"
 ; Ctrl keyup
 ~Ctrl Up::
 {
-    if WinActive("ahk_class Chrome_WidgetWin_1") and !WinActive(WindowTitle) and !WinActive(DeveloperToolsWindowTitle)
+    if WinGetTitle("A") == ""
     {
         Send "{Enter}"
     }
@@ -61,7 +57,7 @@ DeveloperToolsWindowTitle := "Developer Tools"
 #HotIf
 
 
-#HotIf WinActive("ahk_exe Chrome.exe") and WinActive("ahk_class Chrome_WidgetWin_1") and !WinActive(WindowTitle) and !WinActive(DeveloperToolsWindowTitle)
+#HotIf WinActive("ahk_exe Chrome.exe") and WinGetTitle("A") == ""
 
 ; Ctrl+Right, Ctrl+Shift+Right, Ctrl+Shift+Down
 ^Right::
